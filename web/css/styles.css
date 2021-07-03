@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+body {
+    background-image: repeating-linear-gradient(135deg, rgba(192, 192, 192, 0.425) 0px, rgba(192, 192, 192, 0.425) 10px, white 10px, white 20px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*min-height: 100vh;*/
+    /*background-position: left top;*/
+}
+
+.wrap {
+    min-height: 80vh;
+    height: auto;
+    margin: 0 auto auto;
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+header {
+    display: block;
+    height: calc(5rem + 4px);
+    background-color: black;
+    color: white;
+    padding: 0 5rem;
+}
+
+header, footer {
+    min-width: 550px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.nav-admin, .nav-misc, .table-col-controls {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0;
+}
+
+.nav-admin {
+    width: 45%;
+    flex-wrap: wrap;
+    color: gold;
+}
+
+.nav-misc {
+    width: 45%;
+    float: right;
+    justify-content: flex-end;
+}
+
+nav a {
+    display: inline-block;
+    border: 2px solid white;
+    border-radius: 4px;
+    margin: 1rem;
+    padding: .5rem;
+    transition: transform .5s, background-color .5s, color .2s;
+}
+
+nav a:hover {
+    transform: translateY(.5vh);
+    background-color: white;
+    color: black;
+    /*cursor: pointer;*/
+}
+
+nav a:first-child {
+    margin-left: 0px;
+}
+
+nav a:last-child {
+    margin-right: 0px;
+}
+
+.table-col-controls-box {
+    padding: 1rem;
+}
+
+.common-box, .table-box {
+    margin: 2rem 5rem;
+    background-color: blanchedalmond;
+    border: 2px solid black;
+    border-radius: 4px;
+    min-width: 450px;
+}
+
+.common-box {
+    padding: 2rem;
+}
+
+.legend-caption {
+    display: block;
+    float: left;
+    background-color: gold;
+    border-radius: 4px;
+    border: 2px solid black;
+    padding: .25rem;
+    position: relative;
+    top: calc(-.5em - 2.25rem);
+    font-weight: bold;
+}
+
+.table-col-controls {
+    margin: calc(-4px - .5rem - 1rem) 0 0 0;
+    width: 100%;
+    justify-content: space-around;
+}
+
+li > input[type="checkbox"] {
+    margin-left: 1rem;
+    transform: scale(1.5);
+}
+
+.table-col-controls > li {
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 1rem;
+    background-color: white;
+}
+
+table {
+    display: table;
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
+    /*letter-spacing: 1px;*/
+    /*font-size: .8rem;*/
+    /*text-align: center !important;*/
+}
+
+@media screen and (max-width: 920px) {
+    header {
+        height: calc(10rem + 8px);
+    }
+
+    table {
+        font-size: .8rem;
+    }
+
+    img {
+        max-width: 70px !important;
+        max-height: 70px !important;
+    }
+}
+
+.searchbox {
+    width: 30%;
+    height: 5%;
+    /*border: 2px solid black;*/
+    float: right;
+    margin-top: -.3rem;
+    margin-bottom: -1rem;
+    margin-left: -100%;
+}
+
+input[type="text"] {
+    width: calc(100% - 6rem);
+    height: 100%;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+th {
+    background-color: rgb(235, 235, 235);
+    text-align: center;
+}
+
+td {
+    text-align: center;
+    max-width: 100%;
+}
+
+img {
+    border: 1px solid black;
+    border-radius: 4px;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+thead th {
+    background-color: gold !important;
+}
+
+tr:nth-child(odd) td {
+    background-color: rgb(250, 250, 250);
+}
+
+tr:nth-child(even) td {
+    background-color: rgb(235, 235, 235);
+}
+
+td:only-child {
+    width: 100%;
+}
+
+caption {
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.pagination {
+    margin: 2vw;
+}
+
+.pagination * {
+    margin: 0 1vw;
+    border-radius: 4px;
+}
+
+.pagination > li > * {
+    border: 2px solid black !important;
+    transition: color .2s, transform .5s, background-color .5s;
+}
+
+.pagination > li:not([class~='active']):not([class~='disabled']) > *:hover {
+    transform: translateY(.5vh);
+    background-color: black;
+    color: white;
+}
+
+.super {
+    background-color: black;
+}
+
+footer {
+    /*margin-top: 100%;*/
+    display: flex;
+    justify-content: center;
+    clip-path: polygon(0% 30%, 100% 0%, 100% 100%, 0% 100%);
+    align-items: center;
+    height: 20vh;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
